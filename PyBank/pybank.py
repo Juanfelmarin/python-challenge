@@ -3,6 +3,7 @@ import os
 import csv
 
 csvpath= os.path.join('Resources','budget_data.csv')
+csvpath2= os.path.join('analysis' , 'Output.txt')
 total_months = 0
 total_net = 0
 dates=[]
@@ -53,6 +54,8 @@ output = (
     f"Greatest Decrease in Profits: {min_profit}\n")
 
 print(output)
+with open(csvpath2,"w+") as txtfile:
+    txtfile.write(output) 
 
 
 

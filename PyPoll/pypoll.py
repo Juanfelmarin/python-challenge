@@ -2,6 +2,7 @@ import os
 import csv
 
 csvpath= os.path.join('..','Pypoll/resources','election_data.csv')
+csvpath2= os.path.join('analysis' , 'Output.txt')
 unique_list=[]
 votes=[]
 
@@ -43,6 +44,8 @@ output = (
     )
 
 print(output)
+with open(csvpath2,"w+") as txtfile:
+    txtfile.write(output)
 
 
 
